@@ -1,0 +1,247 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Generic (CALLED IN ANOTHER FILE)
+	- Normalize
+	- Box sizing
+	- Media width
+# Base
+	- Typography
+	- Elements
+	- Links
+# Layouts
+# Components
+	- Header
+	- Main
+	- Footer
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+
+/* Typography
+--------------------------------------------- */
+@font-face {
+	font-family: 'sacramento';
+	src: url(../font/sacramento-regular-webfont.woff2);
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'montserrat';
+	src: url(../font/montserrat-light-webfont.woff2);
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'montserrat';
+	src: url(../font/montserrat-regular-webfont.woff2);
+	font-weight: bold;
+	font-display: swap;
+}
+
+body {
+	color: #2e3544;
+	font-family: 'montserrat', 'arial';
+	line-height: 1.8rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-align: center;
+	font-family: 'sacramento', 'arial';
+	color: #013567;
+}
+
+h1 {
+	margin: 4rem 0;
+	font-size: 4rem;
+}
+
+h2 {
+	font-size: 2.5rem;
+}
+
+@media screen and (min-width: 60rem){
+	h1 {
+		margin: 6rem 0;
+		font-size: 6rem;
+	}
+
+	h2 {
+		font-size: 4rem;
+		margin: .5rem 0;
+	}
+
+	p {
+		font-size: 1.2rem;
+	}
+}
+
+/* Elements
+--------------------------------------------- */
+a:focus {
+	outline: solid 2px #013567;
+}
+
+/* Links
+--------------------------------------------- */
+a {
+	color: #013567;
+	text-decoration: none;
+}
+
+a:hover {
+	font-weight: 900;
+}
+
+
+
+/*--------------------------------------------------------------
+# Layout
+--------------------------------------------------------------*/
+
+
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+
+/* Header
+--------------------------------------------- */
+
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	color: #013567;
+}
+
+header img {
+	margin: 1rem;
+	width: 4.5rem;
+}
+
+header.blue,
+header.blue nav ul,
+nav a {
+    background-color: #013567;
+}
+
+header a {
+	color: #fffcf9;
+}
+
+nav {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+nav img {
+	height: 1.5rem;
+	width: 1.5rem;
+	padding: 1rem 2rem 0 0;
+	cursor: pointer;
+}
+
+header.blue nav ul {
+	text-align: center;
+	padding: 0 0 2rem 0;
+}
+
+nav ul {
+	position: absolute;
+	top: 5rem;
+	width: 100%;
+	text-align: right;
+	padding: 0 2rem 2rem 0;
+}
+
+nav li {
+	list-style-type: none;
+	text-transform: uppercase;
+	font-weight: bold;
+	padding: 0.5rem 1rem;
+}
+
+nav ul a {
+	border: solid 2px transparent;
+	padding: 5px;
+}
+
+nav ul a:hover {
+	border: solid 2px #fffcf9;
+}
+
+
+@media screen and (max-width: 50rem) {
+	nav ul.hidden {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 50rem) {
+	#hamburger {
+		display: none;
+	}
+
+	header {
+		background-color: rgba(1, 53, 103, 0.4);
+	}
+
+	header.blue nav ul {
+		padding: 0 2rem 0 0;
+	}
+
+	nav ul {
+		display: flex;
+		position: initial;
+		justify-content: flex-end;
+		padding-bottom: 0;
+	}
+
+	nav li {
+		font-size: 1.2rem;
+		padding: 0 1rem;
+	}
+
+	header nav ul,
+	nav a {
+		background-color: transparent;
+	}
+
+}
+
+@media screen and (min-width: 90rem) {
+	nav li {
+		font-size: 1.5rem;
+		padding: 0 2rem;
+	}
+}
+
+
+
+/* Main
+--------------------------------------------- */
+
+
+/* Footer
+--------------------------------------------- */
+
+footer {
+	background-color: #013567;
+	color: #fffcf9;
+	height: 5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 3rem;
+}
